@@ -1,1 +1,1 @@
-A dynamic and visually appealing web app that generates random quotes at the click of a button. Each quote is paired with the name of its author, providing users with a new, inspiring thought every time they interact.
+A dynamic and visually appealing website that generates random quotes at the click of a button. Each quote is paired with the name of its author, providing users with a new, inspiring thought every time they interact.
