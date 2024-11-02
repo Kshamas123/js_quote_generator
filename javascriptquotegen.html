@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@1,100&family=Roboto:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: url('pic.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Roboto';
+            font-weight: 300;
+        }
+        .container{
+            margin: auto;
+            text-align: center;
+            padding: 300px;
+        }
+        .header{
+             font-size: 50px;
+             color: aliceblue;
+             background-color: black;
+        }
+        .main-content{
+            font-size: 25px;
+            color: rgb(29, 2, 2);
+            font-weight: 400;
+            border-style: dotted;
+            padding: 10px;
+            font-weight: bold;
+        }
+        #new-quote{
+            font-size: 20px;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: rgb(125, 198, 15);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="header">
+            <h2>Javascript Quote Generator</h2>
+        </div>
+         <div class="main-content">
+            <div class="text-area">
+                <span class="quote">
+                    "I do the very best I know how the very best I can; and I mean to keep on doing so until the end. "
+                </span>
+            </div>
+            <div class="person">
+                - Abraham Lincoln
+            </div>
+            <div class="button-area">
+                <button id="new-quote">
+                    New Quote
+                </button>
+            </div>
+         </div>
+     </div>
+     <script>
+        let btn=document.querySelector('#new-quote');
+        let quote=document.querySelector('.quote');
+        let person=document.querySelector('.person');
+
+        const quotes=[{
+            quote1:'To live is the rarest thing in the world. Most people exist, that is all.',
+            person1:'Oscar Wilde'
+        },
+    {
+        quote1:'That it will never come again is what makes life so sweet.',
+        person1:'Emily Dickinson' 
+    },
+    {
+        quote1:'To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.',
+        person1:'Ralph Waldo Emerson' 
+    },
+    {
+        quote1:'Pain is inevitable. Suffering is optional.',
+        person1:'Haruki Murakami' 
+    }
+]
+btn.addEventListener('click',function(e){
+    let id= Math.floor(Math.random() * (quotes.length));
+    quote.innerHTML=" \" "+quotes[id].quote1+" \" ";
+    person.innerHTML="- "+quotes[id].person1
+})
+     </script>
+</body>
+</html>
